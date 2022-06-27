@@ -4,12 +4,12 @@ print("Enter a year to know if it is a leap year")
 print("If you wish to quit the program, enter 'quit'")
 boolean = True
 while boolean:
-    text = input("Enter the year or quit : ")
-    if text == "quit":
+    userInput = input("Enter the year or quit : ")
+    if userInput == "quit":
         boolean = False
-    elif text.isdigit():
-        text = int(text)
-        if (text % 4 == 0 or text % 400 == 0) and text % 100 != 0:
+    elif userInput.isdigit():
+        userInput = int(userInput)
+        if (userInput % 4 == 0 or userInput % 400 == 0) and userInput % 100 != 0:
             print("This year is bisextile")
         else:
             print("This year is not bisextile")
