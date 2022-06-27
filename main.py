@@ -1,12 +1,19 @@
 if __name__ == "__main__":
     text = "ABCD"
     # Convert string to list
+    list = list(text)
 
     # Convert each element of list in to ascii 7 bits integer
+    newList = []
+    for caracter in list :
+        # Convert each ascii integer to binary
+        newList.append(bin(ord(caracter))) # ord() returns ascii number and bin() returns binary
+    print(newList)
 
-    # Convert each ascii integer to binary
+    # Convert binary to octal
+    for i in newList:
+        print("Coucou je vous aime tous comme vous êtes <3")
 
-    # Convert binary to octet
 
     # Convert binary to 6
 
