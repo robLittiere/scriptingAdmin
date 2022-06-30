@@ -1,42 +1,52 @@
 if __name__ == '__main__':
     string = "ABCD"
 
-# Convert string to list
-    charList = []
+    # Convert string to list
+    def toList(paramList):
+        charList = []
 
-    for char in string:
-        charList.append(char)
+        for char in paramList:
+            charList.append(char)
 
-    print(charList)
+        return charList
+
+    # Convert each element of list in to ascii 7 bits integer
+    def toAscii(paramList):
+        ordList = []
+
+        for char in paramList:
+            ordList.append(ord(char))
+
+        return ordList
+
+    # Convert each ascii integer to binary
+    def toBin(paramList):
+        binList = []
+        for char in paramList:
+            binList.append(bin(char))
+
+        return binList
+
+    # Convert binary to octet
+    def toOct(paramList):
+        octList = []
+        for char in paramList:
+            octList.append("0" + char)
+
+        return octList
+
+    # Convert oct to one string
+    def octToString(paramList):
+        octString = ""
+        for char in paramList:
+            octString += char
+
+        return octString
 
 
-# Convert each element of list in to ascii 7 bits integer
-    ordList = []
-    for char in charList:
-        ordList.append(ord(char))
-
-    print(ordList)
-
-# Convert each ascii integer to binary
-
-    binList = []
-    for char in ordList:
-        binList.append(bin(char))
-
-    print(binList)
+    # Convert list to string, each element is a 6 characters binary number
 
 
-# Convert binary to octet
-
-    octList = []
-    for char in binList:
-        octList.append("0" + char)
-
-    print(octList)
-
-# Convert binary to 6
-
-# Convert list to string, each element is a 6 characters binary number
 # Last one has to be six characters also, so add 0s to complete it
 
 # Convert each binary number to decimal
@@ -46,3 +56,5 @@ if __name__ == '__main__':
 # Convert list to string
 
 # Complete String to create useable base64 string
+
+print(octToString(toOct(toBin(toAscii(toList(string))))))
